@@ -8,8 +8,8 @@ import * as CryptoJS from 'crypto-js';
 })
 export class AppComponent {
   title = 'Assignment_2';
-  value="xyz"
-  value_decrypted="zyx"
+  value=""
+  value_decrypted=""
   encryption_method="AES"
   decryption_method="AES"
   encryption_key="YourSecretKeyForEncryption"
