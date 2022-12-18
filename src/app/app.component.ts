@@ -59,7 +59,7 @@ export class AppComponent {
       key2.push(key2[i])
       i++
     }
-     
+     //
     // perform XOR operation of key
     // with every character in string
     for (let i = 0; i < len; i++)
