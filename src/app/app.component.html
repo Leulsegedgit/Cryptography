@@ -1,0 +1,105 @@
+<form #Form="ngForm" class="example-form" >
+  <!-- <h2>channel setting[NAME:liy ID:-10078262458]</h2> -->
+  <!-- {{channelForm.value | json}}
+  <br>
+  {{channel_setting | json}} -->
+  <mat-card>
+    <h1>Encryption</h1>
+    <table class="example-full-width">
+      <tr>
+      <td>
+         <mat-form-field class="example-full-width">
+            <mat-label>Message to encrypt</mat-label>
+            <textarea matInput placeholder="Type your secret text here..." name="message_area" ngModel></textarea>
+          </mat-form-field>
+      
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+            <mat-label>Encrypted Message</mat-label>
+            <textarea matInput name="message" [(ngModel)]="value"></textarea>
+          </mat-form-field>
+          <button [cdkCopyToClipboard]="value"><mat-icon>file_copy</mat-icon>Copy</button>
+   
+      </td>
+    </tr>
+      <tr>
+      <td><mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Encryption method</mat-label>
+        <mat-select name="encryption_method" [(ngModel)]="encryption_method">
+        <mat-option value="AES">AES</mat-option>
+        <mat-option value="3DES">3DES</mat-option>
+        <mat-option value="OTP">OTP</mat-option>
+        </mat-select>
+      </mat-form-field></td>
+      <td>
+        
+        <div class="example-button-row">
+          <button mat-raised-button color="accent" (click)="encrypt(Form.value.message_area)"><mat-icon>enhanced_encryption</mat-icon>Encrypt</button>
+          
+        </div>
+      </td>
+    </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Encryption Key</mat-label>
+            <input matInput name="encryption_key" [(ngModel)]="encryption_key">
+          </mat-form-field>
+        </td>
+      </tr>
+   
+    
+    </table>
+  </mat-card>
+  <br>
+  <br>
+  <mat-card>
+    <h1>Decryption</h1>
+    <table class="example-full-width">
+      <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+            <mat-label>Message to decrept</mat-label>
+            <textarea matInput placeholder="Type cipher text here..." name="message_to_decrypt" ngModel></textarea>
+          </mat-form-field>
+      
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+            <mat-label>Decrypted Message</mat-label>
+            <textarea matInput name="message2" [(ngModel)]="value_decrypted"></textarea>
+          </mat-form-field>
+          <button [cdkCopyToClipboard]="value_decrypted"><mat-icon>file_copy</mat-icon>Copy</button>
+   
+      </td>
+    </tr>
+      <tr>
+      <td><mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Decryption method</mat-label>
+        <mat-select name="decreption_method" [(ngModel)]="decryption_method">
+        <mat-option value="AES">AES</mat-option>
+        <mat-option value="3DES">3DES</mat-option>
+        <mat-option value="OTP">OTP</mat-option>
+        </mat-select>
+      </mat-form-field></td>
+      <td>
+        
+        <div class="example-button-row">
+          <button mat-raised-button color="accent" (click)="decrypt(Form.value.message_to_decrypt)"><mat-icon>lock_open</mat-icon>Decrypt</button>
+          
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Encryption Key</mat-label>
+          <input matInput name="decryption_key" [(ngModel)]="decryption_key">
+        </mat-form-field>
+      </td>
+    </tr>
+    
+    </table>
+  </mat-card>
+</form>
