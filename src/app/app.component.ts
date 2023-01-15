@@ -1,3 +1,4 @@
+import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { Component } from '@angular/core';
 import * as CryptoJS from 'crypto-js';
 
@@ -14,8 +15,6 @@ export class AppComponent {
   decryption_method="AES"
   encryption_key="YourSecretKeyForEncryption"
   decryption_key = "YourSecretKeyForDescryption";
-  constructor() { }
-
 
 
   encrypt(value : string) {
@@ -41,6 +40,7 @@ export class AppComponent {
     else
     if(this.decryption_method == "OTP")
     this.value_decrypted = this.encryptOtp(textToDecrypt, this.encryption_key.trim());
+   
   }
 
 
@@ -50,8 +50,7 @@ export class AppComponent {
    var key2 = key.split("")
     // Define XOR key
     // Any character value will work
-    let xorKey = 'P';
- 
+    
     // calculate length of input string
     let len = inpString2.length;
      var i = 0;
@@ -69,6 +68,7 @@ export class AppComponent {
     }
     return  inpString2.join("");
 }
+ 
 }
 
 
