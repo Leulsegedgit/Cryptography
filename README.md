@@ -26,12 +26,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 ############################################################################################################################################
-About the web-app
+## About the web-app
 
 I used crypto-js liberary to implement 3DES and AES encryption but I implenment the ONE-TIME-PAD encryption myself by first converting the input text to ASCI and then convert the numbers to binary and doing XOR with the key and finally converting the result back to text and printing the result.
 
 ################################################################################################################################################
-Update made for the extension
+## Update made for the extension
 
 This time I add sign in option using google authentication so that users can login to the app using thier google account.
 
