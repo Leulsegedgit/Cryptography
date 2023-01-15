@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+############################################################################################################################################
+About the web-app
+
+I used crypto-js liberary to implement 3DES and AES encryption but I implenment the ONE-TIME-PAD encryption myself by first converting the input text to ASCI and then convert the numbers to binary and doing XOR with the key and finally converting the result back to text and printing the result.
+
+################################################################################################################################################
+Update made for the extension
+
+This time I add sign in option using google authentication so that users can login to the app using thier google account.
+
+Steps followed:
+  -I create a google OAuth project and find a client Id to be used on my web app
+  link:  https://console.cloud.google.com/welcome
+  -I used this npm package  https://www.npmjs.com/package/@abacri to communicate with google service
+  -I created a login componetnt page and add a button to sign with google
+  -On successfull login the user let to use the encryption application and detail about user returned form google is printed on the top of the app like userPhoto, username and email..
